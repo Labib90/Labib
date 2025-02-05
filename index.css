@@ -55,8 +55,8 @@ nav {
 /* === TABLE OF CONTENTS === */
 .table-of-contents {
   position: fixed;
-  top: 20px;
-  right: 20px; /* slightly inset from the right edge */
+  top: 100px; /* Adjusted to avoid overlapping with the navigation bar */
+  right: 20px;
   width: 250px;
   background: linear-gradient(135deg, #2c3e50, #4ca1af);
   padding: 20px;
@@ -107,7 +107,6 @@ nav {
   color: #f39c12;
 }
 
-
 .table-of-contents h2 {
   margin-bottom: 10px;
   font-size: 1.8rem;
@@ -133,11 +132,22 @@ nav {
   color: #f39c12;
 }
 
+@media (max-width: 768px) {
+  .table-of-contents {
+    display: none; /* Hide on smaller screens */
+  }
+
+  main {
+    margin-right: 10%; /* Reset margin for smaller screens */
+  }
+}
+
 /* === MAIN CONTENT & SECTIONS === */
 main {
-  padding: 120px 10% 40px; /* Top padding to account for fixed nav */
+  padding: 120px 10% 40px;
   max-width: 1200px;
   margin: auto;
+  margin-right: 300px; /* Added to avoid overlap with the table of contents */
 }
 
 section {
